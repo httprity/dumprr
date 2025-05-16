@@ -13,15 +13,16 @@ body{
 
 .navbar{
     background: linear-gradient(#7b2cbf,#c77dff);
-    padding-inline: 60px;
+    padding-inline: 10%;
+    height: auto;
     border-radius: 10px;
 }
 .navdiv img{
-    width: 150px;
+    width: 17%;
     height: auto;
 }
 .tellus img{
-    width: 500px;
+    width: 36%;
     position: absolute;
     top: 34%;
     left: 6%;
@@ -30,10 +31,10 @@ body{
     position: absolute;
     background: linear-gradient(to right,#000000,#3c096c);
     padding: 0;  
-   width: 450px;  
-   height: 360px; 
+   width: 40%;  
+   height: 60%; 
    top: 30%;
-   left: 57%;
+   left: 55%;
     border-radius: 20px;
     border: none;
     overflow: hidden;
@@ -47,7 +48,7 @@ textarea {
     border: none;
     padding: 10px;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
+    font-size: 100%;
     margin-left: 20px;
     margin-top: 25px;
     outline: none;
@@ -56,16 +57,16 @@ button{
     color: aliceblue;
     position: absolute;
     top: 80%;
-    left:20%;
-    padding: 15px 40px;
+    left:17%;
+    padding: 1% 3.5%;
     border-radius: 15px;
-    font-size: 18px;
+    font-size: 100%;
     font-family: "Poppins", sans-serif;;
     background: linear-gradient(to right, #070012, #240343);
     text-decoration: none;
     border: none;
     box-shadow: 0 0 10px rgba(109, 22, 191, 0.8); 
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.2s ease;
 }
 button:hover{
     transform: scale(1.3);
@@ -82,7 +83,7 @@ button a {
     top: 115%;
     left: 8%;
     width: 82%;
-    height: 450px;
+    height: 75%;
     padding: 20px;
     color: white;
     border-radius: 25px;

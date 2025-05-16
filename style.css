@@ -25,9 +25,8 @@ body {
     position: absolute; 
     top: 50%; 
     left: 40%;
-    transform: translate(-50%, -98%);
-    width: 200px;  
-    height: 200px; 
+    width: 20%;  
+    height: 40%; 
     margin-bottom: 3px; 
     animation: slideup 3.5s ease 0s 1 alternate both, fadein 4s ease 0s 1 alternate both;
 
@@ -36,31 +35,31 @@ body {
 .header img {
     position: absolute;
     bottom: 5%;
-    left: 48%;
-    width: 500px;  
+    left: 50%;
+    width: 40%;  
     height: auto;  
     margin-bottom: 10px;
     animation: slideright 4.5s ease 0s 1 alternate both, fadein 4s ease 0s 1 alternate both;
 }
 .tagline img{
     position: absolute; 
-    width: 200px;
+    width: 18%;
     height: auto;
     top: 63%; 
-    left: 48%;
+    left: 50%;
     animation: tagup 4.5s ease 0s 1 forwards, fadein 4s ease 0s 1 alternate both;
 }
 .start button{
     background: linear-gradient(to right, #070012, #240343);
-    padding: 10px;
-    width: 150px;
+    padding: 1%;
+    width: 10%;
     position: absolute; 
     top: 75%;
-    left: 42%;
+    left: 45%;
     border-radius: 20px;
     text-decoration: none;
     animation: fadein 6s ease 0s 1  forwards;
-    font-size: 26px;
+    font-size: 110%;
     border: none;
     box-shadow: 0 0 10px rgba(109, 22, 191, 0.8); 
     transition: box-shadow 0.3s ease;
