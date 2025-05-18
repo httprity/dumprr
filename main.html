@@ -58,6 +58,7 @@
         responseDiv.classList.remove("hidden");
         responseDiv.style.display = "block";
         responseDiv.innerHTML = "Loading...";
+        responseDiv.scrollIntoView({ behavior: "smooth", block: "start" });
         try {
           const response = await fetch("/api/proxy", {
             method: "POST",
