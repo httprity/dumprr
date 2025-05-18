@@ -80,7 +80,7 @@ button a {
 .output {
     background: linear-gradient(to right,#000000,#3c096c);
     position: absolute;
-    top: 115%;
+    top: 125%;
     left: 8%;
     width: 82%;
     height: 75%;
@@ -88,8 +88,6 @@ button a {
     color: white;
     border-radius: 25px;
     overflow-y: auto;  /* Enable vertical scrolling if content exceeds height */
-    animation: appear linear;
-    animation-timeline: view();
     
   }
   footer {
@@ -97,7 +95,7 @@ button a {
     color: white;
     text-align: center;
     padding: 0.2%;
-    position: fixed;       /* makes footer stick to the bottom */
+    position: fixed; 
     bottom: 0;
     width: 100%;
     font-size: 0.8rem;
@@ -147,10 +145,11 @@ button a {
     padding: 5% ;
   }
   .output {
-    top: 125%;
+    top: 130%;
     left: 0.7%;
-    width: 90%;
+    width: 80%;
     height: 60%;
+    left: 5%;
   }
   .responseheader h1 {
     top: 120%;
@@ -226,7 +225,7 @@ button a {
     padding: 2% 4.5%;
   }
   .output {
-    top: 110%;
+    top: 120%;
     left: 8%;
     width: 82%;
     height: 75%;

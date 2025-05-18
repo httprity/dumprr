@@ -45,6 +45,7 @@
 
         if (!input) {
           responseDiv.innerHTML = "Please share your idea first.";
+          responseDiv.scrollIntoView({ behavior: "smooth" });
           return;
         }
 
@@ -88,8 +89,10 @@
           const markdownText =
             data.choices?.[0]?.message?.content || "No response received.";
           responseDiv.innerHTML = marked.parse(markdownText);
+          responseDiv.scrollIntoView({ behavior: "smooth" });
         } catch (error) {
           responseDiv.innerHTML = `Error: ${error.message}`;
+          responseDiv.scrollIntoView({ behavior: "smooth" });
           console.error("API Error:", error);
         }
       }
