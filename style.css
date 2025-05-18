@@ -20,33 +20,13 @@ body {
     text-align: center;
 }
 
-.ideaLogo img {
-    position: absolute; 
-    top: 50%; 
-    left: 43%;
-    width: 15%;  
-    height: auto; 
-    margin-bottom: 0.3%; 
-    animation: slideup 3.5s ease 0s 1 alternate both, fadein 4s ease 0s 1 alternate both;
-
-}
-
-.header img {
+.webintroo img{
     position: absolute;
-    top: 10%;
-    left: 50%;
-    width: 40%;  
-    height: auto;  
-    margin-bottom: 1%;
-    animation: slideright 4.5s ease 0s 1 alternate both, fadein 4s ease 0s 1 alternate both;
-}
-.tagline img{
-    position: absolute; 
-    width: 18%;
+    top:20%;
+    left:25%;
+    width: 50%;
     height: auto;
-    top: 66.5%; 
-    left: 50%;
-    animation: tagup 4.5s ease 0s 1 forwards, fadein 4s ease 0s 1 alternate both;
+    animation: fadeinSlideRight 4s ease forwards;
 }
 .start button{
     background: linear-gradient(to right, #070012, #240343);
@@ -98,21 +78,55 @@ body {
         transform: translateY(-100%);
    } 
 }
-@keyframes slideright {
+@keyframes fadeinSlideRight {
     from{
-        transform: translateX(-100%);
-    }
-    to{
+        opacity: 0;
         transform: translateX(-50%);
-        
-    }
-}
-@keyframes tagup {
-    from{
-        transform: translateX(-150%);
     }
     to{
-        transform: translateX(-50%)
+        opacity: 1;
+        transform: translateX(0%);
     }
 }
-
+/* responsive media queries*/
+@media (max-width: 480px) {
+    .webintroo img {
+      top: 37%;
+      left: 1.9%;
+      width: 100%;
+    }
+    .start button {
+      width: 50%;
+      left: 25%;
+      font-size: 1.1rem;
+      padding: 3%;
+    }
+  }
+  /* Laptops (481px to 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .webintroo img {
+      top: 40%;
+      left: 14%;
+      width: 70%;
+    }
+    .start button {
+      width: 30%;
+      left: 35%;
+      font-size: 1.5rem;
+      padding: 1.5%;
+    }
+  }
+  /* Desktops (1025px and above) */
+@media (min-width: 1025px) {
+    .webintroo img {
+      top: 13%;
+      left: 20%;
+      width: 60%;
+    }
+    .start button {
+      width: 20%;
+      left: 40%;
+      font-size: 1.2rem;
+      padding: 1.5%;
+    }
+  }
