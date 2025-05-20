@@ -127,22 +127,22 @@ button a {
     width: 40%;
   }
   .tellus img {
-    top: 25%;
-    left: 2%;
+    top: 15%;
+    left: 15%;
     width: 70%;
   }
   .enter {
-    top: 22%;
-    left: 5%;
-    width: 90%;
-    height: 50%;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    height: 30%;
   }
   button {
-    top: 78%;
+    top: 75%;
     left: 25%;
     width: 50%;
     font-size: 1.3rem;
-    padding: 5% ;
+    padding: 3% ;
   }
   .output {
     top: 130%;
