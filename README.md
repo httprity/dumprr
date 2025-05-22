@@ -14,8 +14,23 @@ Backend: Node.js, Express
 API Integration: DeepSeek R1 API (via backend proxy)
 Other: dotenv for environment variables, CORS for security
 
+## Author
 
-## how to push code
-1. git add .
-2. git commit -m"commit message"
-3. git push
+Created and maintained by **Samprity Haque**  
+[LinkedIn](https://www.linkedin.com/in/hsamprity)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).  
+You are free to use, modify, and fork this project **with proper attribution** to the original author.
+
+## Contributions & Forking
+
+Contributions and forks are **welcome and encouraged**!  
+If you fork or build upon this project, please keep the original license and credit the author.  
+
+Feel free to submit pull requests with improvements or new features — I’d love to collaborate!
+
+Thanks for checking out Dumpr! 🚀
+
+
