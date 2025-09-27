@@ -27,7 +27,10 @@ app.post("/api/proxy", async (req, res) => {
         "HTTP-Referer": process.env.SITE_URL || "https://your-app.vercel.app",
         "X-Title": process.env.SITE_NAME || "Dumpr",
       },
-      body: JSON.stringify(req.body),
+      body: JSON.stringify({
+  ...req.body,
+  max_tokens: 1000,   // 👈 safe limit
+      }),
     });
 
     const data = await response.json();

@@ -1,5 +1,5 @@
 // api/proxy.js
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -15,7 +15,10 @@ export default async function handler(req, res) {
         'HTTP-Referer': process.env.SITE_URL || 'https://your-app.vercel.app',
         'X-Title': process.env.SITE_NAME || 'Dumpr',
       },
-      body: JSON.stringify(req.body),
+      body: JSON.stringify({
+        ...req.body,
+        max_tokens: 1000,   // ✅ correctly placed
+      }),
     });
 
     const data = await response.json();
