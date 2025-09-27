@@ -67,6 +67,7 @@
             },
             body: JSON.stringify({
               model: "google/gemini-2.0-flash-exp:free", // Verify this model exists
+              max_tokens: 1000,
               messages: [
                 {
                   role: "system",
