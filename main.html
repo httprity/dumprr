@@ -78,14 +78,21 @@
             }),
           });
 
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-
           const data = await response.json();
-          if (data.error) {
-            throw new Error(data.error.message || "API error occurred");
-          }
+
+if (!response.ok) {
+  // Show the backend's error response if available
+  throw new Error(
+    data?.error?.message || JSON.stringify(data.error) || `HTTP error! Status: ${response.status}`
+  );
+}
+
+if (data.error) {
+  throw new Error(
+    data.error.message || JSON.stringify(data.error) || "API error occurred"
+  );
+}
+
 
           const markdownText =
             data.choices?.[0]?.message?.content || "No response received.";
