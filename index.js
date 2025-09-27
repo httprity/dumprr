@@ -13,24 +13,34 @@ app.use(express.static(path.join(__dirname)));
 app.post("/api/proxy", async (req, res) => {
   try {
     const fetch = (await import("node-fetch")).default;
-    console.log(`${process.env.API_KEY}`);
-    const response = await fetch(
-      "https://openrouter.ai/api/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.API_KEY}`,
-          "Content-Type": "application/json",
-          "HTTP-Referer": process.env.SITE_URL || "https://your-app.vercel.app",
-          "X-Title": process.env.SITE_NAME || "Dumpr",
-        },
-        body: JSON.stringify(req.body),
-      }
-    );
+
+    if (!process.env.API_KEY) {
+      console.error("API_KEY is missing");
+      return res.status(500).json({ error: "Server misconfiguration: API_KEY not set" });
+    }
+
+    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.API_KEY}`,
+        "Content-Type": "application/json",
+        "HTTP-Referer": process.env.SITE_URL || "https://your-app.vercel.app",
+        "X-Title": process.env.SITE_NAME || "Dumpr",
+      },
+      body: JSON.stringify(req.body),
+    });
+
     const data = await response.json();
-    res.json(data);
+
+    if (!response.ok) {
+      console.error("OpenRouter error:", data);
+      return res.status(response.status).json({ error: data });
+    }
+
+    return res.status(200).json(data);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.error("Proxy error:", error);
+    return res.status(500).json({ error: error.message });
   }
 });
 
